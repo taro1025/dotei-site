@@ -1,0 +1,6 @@
+body{margin:0;background:#F3EEE3;color:#1F1D1B;font-family:-apple-system,"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;line-height:1.85}
+main{max-width:720px;margin:0 auto;padding:40px 22px 64px}h1,h2{font-family:"Hiragino Mincho ProN","YuMincho",serif}
+h1{font-size:1.8em;line-height:1.4}h2{font-size:1.15em;margin-top:2em}a{color:#C43D2B}
+.bar{height:6px;background:#C43D2B;border-radius:3px;width:56px;margin:8px 0 24px}footer{margin-top:48px;font-size:.85em;color:#6B655D}
+nav a{margin-right:14px}img.icon{width:96px;height:96px;border-radius:22px}.poem{font-family:"Hiragino Mincho ProN",serif;font-size:1.3em}
+@media (prefers-color-scheme:dark){body{background:#1C1B19;color:#EEE8DC}a{color:#E2593F}footer{color:#A59E92}}
