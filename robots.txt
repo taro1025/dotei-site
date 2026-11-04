@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dotei.process-craft-ai.com/sitemap.xml

@@ -94,12 +94,20 @@ PAGES = {
 FILES = {"index": "index.html", "privacy": "privacy.html", "terms": "terms.html", "support": "support.html"}
 
 
-def page(p, kind, root):
+SITE = "https://dotei.process-craft-ai.com"
+
+
+def page_url(folder, name):
+    path = "" if folder == "." else folder + "/"
+    return f"{SITE}/{path}{'' if name == 'index.html' else name}"
+
+
+def page(p, kind, root, url):
     title, body = p[kind]
     links = " ".join(f'<a href="{FILES[k]}">{label}</a>' for k, label in zip(FILES, p["nav"]))
     head_title = "DOTEI" if kind == "index" else f"{title} | DOTEI"
     return f"""<!doctype html><html lang="{p['lang']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{head_title}</title><link rel="stylesheet" href="{root}style.css"></head><body><main>
+<title>{head_title}</title><link rel="canonical" href="{url}"><link rel="stylesheet" href="{root}style.css"></head><body><main>
 <nav>{links} <a href="{p['other']}{FILES[kind]}">{p['other_label']}</a></nav>
 <h1>{title}</h1><div class="bar"></div>{body.replace('{root}', root)}
 <footer>© 2026 Process Craft AI</footer></main></body></html>
@@ -130,10 +138,20 @@ def main():
     os.makedirs("sample", exist_ok=True)
     for lang, root, folder in (("ja", "", "."), ("en", "../", "en")):
         for kind, name in FILES.items():
-            open(os.path.join(folder, name), "w").write(page(PAGES[lang], kind, root))
+            open(os.path.join(folder, name), "w").write(page(PAGES[lang], kind, root, page_url(folder, name)))
     shutil.copy(os.path.join(DEMO, "Timeline.json"), "sample/Timeline.json")
     open("sample/walk.gpx", "w").write(sample_gpx())
     open(".nojekyll", "w").write("")
+    write_sitemap()
+
+
+def write_sitemap():
+    """全ページの sitemap.xml と、その場所を書いた robots.txt を出す"""
+    urls = [page_url(folder, name) for folder in (".", "en") for name in FILES.values()]
+    locs = "".join(f"  <url><loc>{u}</loc></url>\n" for u in urls)
+    open("sitemap.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n'
+                                   f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{locs}</urlset>\n')
+    open("robots.txt", "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 
 
 if __name__ == "__main__":
