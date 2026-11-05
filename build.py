@@ -102,12 +102,62 @@ def page_url(folder, name):
     return f"{SITE}/{path}{'' if name == 'index.html' else name}"
 
 
+APP_STORE = "https://apps.apple.com/jp/app/id6830070527"
+META = {
+ "ja": {"home": "DOTEI｜歩いた道だけを描く散歩の地図アプリ", "locale": "ja_JP",
+        "index": "DOTEI は、歩いた道だけを和紙の地図に墨の線で残す iPhone アプリ。Google マップのタイムライン・ヘルスケア・GPX から過去の道も取り込めます。はじめての道は朱。7 日間無料、そのあとは買い切り。",
+        "privacy": "DOTEI のプライバシーポリシー。位置情報・ヘルスケア・取り込んだファイルはすべて端末の中だけで扱います。",
+        "terms": "DOTEI の利用規約。7 日間の無料体験と買い切りの購入、安全に使うための注意について。",
+        "support": "DOTEI のサポート。Google マップのタイムラインやヘルスケアの記録の取り込み方、購入の復元、記録の消し方。"},
+ "en": {"home": "DOTEI | A walking map that draws only the streets you have walked", "locale": "en_US",
+        "index": "DOTEI is an iPhone app that draws only the streets you have walked, in ink, on a blank map. Import past walks from Google Maps Timeline, Health and GPX. Free for 7 days, then a one-time purchase.",
+        "privacy": "DOTEI privacy policy. Location, Health data and imported files stay on your iPhone.",
+        "terms": "DOTEI terms of use, including the 7-day free trial, the one-time purchase and safety.",
+        "support": "DOTEI support: importing Google Maps Timeline and Health workouts, restoring purchases and deleting records."},
+}
+
+
+def home_json_ld():
+    """トップの構造化データ。Google は WebSite の name を検索結果のサイト名に使う"""
+    publisher = {"@type": "Organization", "name": "Process Craft AI", "url": "https://process-craft-ai.com/"}
+    graph = [
+        {"@type": "WebSite", "name": "DOTEI", "alternateName": ["ドウテイ", "道程", "DOTEI - 歩いた道だけの地図"],
+         "url": f"{SITE}/", "inLanguage": "ja", "publisher": publisher},
+        {"@type": "SoftwareApplication", "name": "DOTEI", "alternateName": "DOTEI - 歩いた道だけの地図",
+         "operatingSystem": "iOS", "applicationCategory": "TravelApplication",
+         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY"},
+         "url": f"{SITE}/", "downloadUrl": APP_STORE, "sameAs": [APP_STORE],
+         "image": f"{SITE}/icon-512.png", "publisher": publisher},
+    ]
+    data = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
+    return f'<script type="application/ld+json">{data}</script>'
+
+
+def head_meta(lang, kind, title, url):
+    """description・OGP・twitter:card・ファビコン。トップ（日本語）には構造化データも足す"""
+    m = META[lang]
+    desc = m[kind]
+    tags = [f'<meta name="description" content="{desc}">', '<meta property="og:site_name" content="DOTEI">',
+            f'<meta property="og:type" content="website"><meta property="og:locale" content="{m["locale"]}">',
+            f'<meta property="og:title" content="{title}"><meta property="og:description" content="{desc}">',
+            f'<meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/icon-512.png">',
+            '<meta name="twitter:card" content="summary">',
+            '<link rel="icon" href="/favicon.ico" sizes="48x48">',
+            '<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">',
+            '<link rel="apple-touch-icon" href="/apple-touch-icon.png">']
+    if lang == "ja" and kind == "index":
+        tags.append(home_json_ld())
+    return "\n".join(tags)
+
+
 def page(p, kind, root, url):
     title, body = p[kind]
     links = " ".join(f'<a href="{FILES[k]}">{label}</a>' for k, label in zip(FILES, p["nav"]))
-    head_title = "DOTEI" if kind == "index" else f"{title} | DOTEI"
+    head_title = META[p["lang"]]["home"] if kind == "index" else f"{title} | DOTEI"
     return f"""<!doctype html><html lang="{p['lang']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{head_title}</title><link rel="canonical" href="{url}"><link rel="stylesheet" href="{root}style.css"></head><body><main>
+<title>{head_title}</title><link rel="canonical" href="{url}">
+{head_meta(p["lang"], kind, head_title, url)}
+<link rel="stylesheet" href="{root}style.css"></head><body><main>
 <nav>{links} <a href="{p['other']}{FILES[kind]}">{p['other_label']}</a></nav>
 <h1>{title}</h1><div class="bar"></div>{body.replace('{root}', root)}
 <footer>© 2026 Process Craft AI</footer></main></body></html>
