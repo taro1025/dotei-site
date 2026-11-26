@@ -23,18 +23,19 @@ PAGES = {
 <ul><li>Google マップのタイムライン・ヘルスケアのワークアウト・GPX ファイルから、これまでの道を何年分でも取り込めます</li>
 <li>同じ道は墨が重なって濃くなり、はじめて通る道は朱で描かれます</li>
 <li>年を選ぶと、その年に歩いた道だけが残ります</li>
-<li>記録はこの iPhone の中だけ。アカウント登録もいりません</li>
+<li>記録はこの iPhone とご自身の iCloud だけ。アカウント登録もいりません</li>
 <li>はじめの 7 日間は無料、そのあとは買い切り（月額はありません）</li></ul>"""),
   "privacy": ("プライバシーポリシー", f"""<p>このポリシーは、iPhone アプリ「DOTEI」（以下「本アプリ」）で運営者が情報をどう扱うかを定めます。</p>
 <h2>集める情報</h2><p>運営者は、本アプリから個人を特定できる情報を集めません。本アプリにはアカウント・広告・解析ツール・運営者のサーバーがありません。</p>
-<h2>位置情報</h2><p>位置情報は、記録中に歩いた道を地図に描くためにだけ使います。記録した道は端末の中にだけ保存し、外部に送ることはありません。記録中は画面を閉じても位置情報を使い、iPhone の画面上部に使用中の表示が出ます。記録していないときは位置情報を使いません（地図で現在地を表示するときを除く）。</p>
-<h2>ヘルスケア</h2><p>ヘルスケアからの取り込みを選んだときだけ、ワークアウトとワークアウトの経路を読み取ります。読み取った経路は地図に描くためにだけ使い、端末の中にだけ保存します。ヘルスケアへの書き込みはしません。ヘルスケアのデータを広告・販売・第三者への提供に使うことはありません。</p>
+<h2>位置情報</h2><p>位置情報は、記録中に歩いた道を地図に描くためにだけ使います。記録した道は端末の中と、あなた自身の iCloud Drive のバックアップにだけ保存し、運営者を含め外部に送ることはありません。記録中は画面を閉じても位置情報を使い、iPhone の画面上部に使用中の表示が出ます。記録していないときは位置情報を使いません（地図で現在地を表示するときを除く）。</p>
+<h2>ヘルスケア</h2><p>ヘルスケアからの取り込みを選んだときだけ、ワークアウトとワークアウトの経路を読み取ります。読み取った経路は地図に描くためにだけ使い、端末の中と、あなた自身の iCloud Drive のバックアップにだけ保存します。ヘルスケアへの書き込みはしません。ヘルスケアのデータを広告・販売・第三者への提供に使うことはありません。</p>
 <h2>取り込んだファイル</h2><p>Google マップのタイムラインや GPX のファイルは、あなたが選んだときだけ読み込み、端末の中で道のりに直して保存します。ファイルの中身を外部に送ることはありません。</p>
+<h2>バックアップ</h2><p>記録が変わるたびに、記録の写しを 1 つのファイルにして、あなた自身の iCloud Drive の「DOTEI」フォルダに保存します。iCloud Drive は Apple のサービスで、運営者はこのファイルを見ることも受け取ることもできません。iCloud Drive をオフにすると保存しません。ファイル App から見たり消したりできます。</p>
 <h2>地図</h2><p>実際の地図を重ねて表示するときは、Apple のマップのデータを使います。Apple のマップの扱いは Apple のプライバシーポリシーに従います。</p>
 <h2>購入</h2><p>無料体験と買い切りの購入は Apple の App Store で処理されます。運営者は支払いの情報を受け取りません。</p>
-<h2>消す方法</h2><p>本アプリの［設定］→［すべての記録を消す］で、記録をすべて消せます。1 本ずつ消すこともできます。本アプリを削除すると、すべてのデータが消えます。</p>
+<h2>消す方法</h2><p>本アプリの［設定］→［すべての記録を消す］で、記録をすべて消せます。1 本ずつ消すこともできます。本アプリを削除すると、端末の中のデータが消えます。iCloud Drive のバックアップは、ファイル App の［iCloud Drive］→［DOTEI］から消せます。</p>
 <h2>変更</h2><p>このポリシーを変えるときは、このページで知らせます。</p>
-<h2>問い合わせ</h2><p><a href="mailto:{MAIL}">{MAIL}</a></p><p>制定: 2026 年 11 月 3 日</p>"""),
+<h2>問い合わせ</h2><p><a href="mailto:{MAIL}">{MAIL}</a></p><p>制定: 2026 年 11 月 3 日 / 改定: 2026 年 11 月 26 日</p>"""),
   "terms": ("利用規約", f"""<p>この規約は、iPhone アプリ「DOTEI」（以下「本アプリ」）の利用条件を定めます。本アプリを使うことで、この規約に同意したものとします。</p>
 <h2>本アプリの内容</h2><p>本アプリは、歩いた道と取り込んだ記録を地図に描くものです。位置情報の誤差や取り込み元の記録の粗さにより、線が実際の道とずれることがあります。道案内や安全の確認には使わないでください。</p>
 <h2>安全</h2><p>歩きながら画面を見続けないでください。交通ルールと周りの安全を守り、私有地や立入禁止の場所に入らないでください。本アプリの利用中に起きたけがや事故について、運営者は責任を負いません。</p>
@@ -49,7 +50,8 @@ PAGES = {
 <h2>ヘルスケアの記録が見つからないとき</h2><p>iPhone の設定アプリ →［ヘルスケア］→［データアクセスとデバイス］→［DOTEI］で、ワークアウトとワークアウトの経路をオンにしてください。経路が残るのは、屋外のウォーキング・ランニング・ハイキング・サイクリングなどのワークアウトです。</p>
 <h2>画面を閉じても記録を続けるには</h2><p>位置情報を［このAppの使用中のみ許可］にしたまま、［歩きはじめる］を押してから画面を閉じてください。記録中は画面上部に位置情報の表示が出ます。</p>
 <h2>購入を復元するには</h2><p>［設定］→［購入を復元］を押してください。</p>
-<h2>記録を消すには</h2><p>［記録］から 1 本ずつ、または［設定］→［すべての記録を消す］で消せます。記録はこの iPhone の中にだけあります。</p>
+<h2>機種を変えた・入れ直したとき（バックアップ）</h2><p>記録は、ご自身の iCloud Drive の「DOTEI」フォルダに自動で保存されています。新しい iPhone で同じ Apple ID にサインインして DOTEI を開くと、戻すかを聞かれます。あとからでも［設定］→［バックアップから戻す］で戻せます。iCloud Drive を使わない場合は、［設定］→［ファイルに書き出す］で保存したファイルから戻せます。</p>
+<h2>記録を消すには</h2><p>［記録］から 1 本ずつ、または［設定］→［すべての記録を消す］で消せます。消す前のバックアップは、iCloud Drive の「DOTEI」フォルダに日付つきで残ります。</p>
 <h2>問い合わせ</h2><p>ご意見・不具合は <a href="mailto:{MAIL}">{MAIL}</a> までお送りください。</p>"""),
  },
  "en": {
@@ -61,18 +63,19 @@ PAGES = {
 <ul><li>Import years of past walks from Google Maps Timeline, Health workouts and GPX files</li>
 <li>Streets you walk again grow darker; streets you walk for the first time turn vermilion</li>
 <li>Pick a year to see only the streets you walked that year</li>
-<li>Your records stay on your iPhone. No account needed</li>
+<li>Your records stay on your iPhone and your own iCloud. No account needed</li>
 <li>Free for the first 7 days, then a one-time purchase (no subscription)</li></ul>"""),
   "privacy": ("Privacy Policy", f"""<p>This policy describes how the iPhone app “DOTEI” (the App) handles information.</p>
 <h2>What we collect</h2><p>We do not collect any personal information from the App. The App has no accounts, ads, analytics or servers of ours.</p>
-<h2>Location</h2><p>Location is used only to draw the streets you walk while recording. Recorded walks are stored only on your device and never sent anywhere. While recording, location is used with the screen off and iPhone shows the location indicator. Location is not used when you are not recording (except to show your position on the map).</p>
-<h2>Health</h2><p>Only when you choose to import from Health does the App read your workouts and workout routes. Routes are used only to draw your map and are stored only on the device. The App does not write to Health. Health data is never used for advertising, sold, or shared with third parties.</p>
+<h2>Location</h2><p>Location is used only to draw the streets you walk while recording. Recorded walks are stored only on your device and in a backup in your own iCloud Drive, and never sent to us or anyone else. While recording, location is used with the screen off and iPhone shows the location indicator. Location is not used when you are not recording (except to show your position on the map).</p>
+<h2>Health</h2><p>Only when you choose to import from Health does the App read your workouts and workout routes. Routes are used only to draw your map and are stored only on the device and in your own iCloud Drive backup. The App does not write to Health. Health data is never used for advertising, sold, or shared with third parties.</p>
 <h2>Imported files</h2><p>Google Maps Timeline and GPX files are read only when you choose them, converted to walks on the device and stored there. Their contents are never sent anywhere.</p>
+<h2>Backup</h2><p>Whenever your records change, the App saves a copy as a single file in the DOTEI folder of your own iCloud Drive. iCloud Drive is Apple's service; we cannot see or receive this file. Nothing is saved when iCloud Drive is off. You can view or delete the file in the Files app.</p>
 <h2>Maps</h2><p>When you show the real map, the App uses Apple Maps data, which is handled under Apple's privacy policy.</p>
 <h2>Purchases</h2><p>The free trial and the one-time purchase are processed by Apple's App Store. We do not receive payment information.</p>
-<h2>Deleting data</h2><p>Settings &gt; Delete all records removes everything; you can also delete walks one by one. Deleting the App removes all data.</p>
+<h2>Deleting data</h2><p>Settings &gt; Delete all records removes everything; you can also delete walks one by one. Deleting the App removes the data on the device. Delete the iCloud Drive backup in the Files app under iCloud Drive &gt; DOTEI.</p>
 <h2>Changes</h2><p>We will post any changes to this policy on this page.</p>
-<h2>Contact</h2><p><a href="mailto:{MAIL}">{MAIL}</a></p><p>Effective: November 3, 2026</p>"""),
+<h2>Contact</h2><p><a href="mailto:{MAIL}">{MAIL}</a></p><p>Effective: November 3, 2026 / Updated: November 26, 2026</p>"""),
   "terms": ("Terms of Use", f"""<p>These terms govern your use of the iPhone app “DOTEI” (the App). By using the App you agree to them.</p>
 <h2>What the App does</h2><p>The App draws the streets you walk and the records you import on a map. Lines may differ from the actual streets because of GPS error or coarse source data. Do not use the App for navigation or safety decisions.</p>
 <h2>Safety</h2><p>Don't keep looking at the screen while walking. Follow traffic rules, stay aware of your surroundings, and do not enter private or restricted areas. We are not responsible for injuries or accidents while using the App.</p>
@@ -87,7 +90,8 @@ PAGES = {
 <h2>If no Health workouts are found</h2><p>Go to Settings &gt; Health &gt; Data Access &amp; Devices &gt; DOTEI and turn on Workouts and Workout Routes. Routes are saved for outdoor walks, runs, hikes and rides.</p>
 <h2>Recording with the screen off</h2><p>Keep location access at “While Using the App”, tap Start walking, then lock your phone. The location indicator shows while recording.</p>
 <h2>Restoring purchases</h2><p>Settings &gt; Restore Purchases.</p>
-<h2>Deleting records</h2><p>Delete walks one by one from Walks, or all at once in Settings &gt; Delete all records. Records exist only on this iPhone.</p>
+<h2>New iPhone or reinstalling (backup)</h2><p>Your records are saved automatically to the DOTEI folder in your own iCloud Drive. Open DOTEI on your new iPhone, signed in with the same Apple ID, and it offers to restore them. You can also restore later in Settings &gt; Restore from Backup, or from a file saved with Settings &gt; Export to Files.</p>
+<h2>Deleting records</h2><p>Delete walks one by one from Walks, or all at once in Settings &gt; Delete all records. The backup from before deleting stays in the DOTEI folder in iCloud Drive with the date in its name.</p>
 <h2>Contact</h2><p>Send feedback or bug reports to <a href="mailto:{MAIL}">{MAIL}</a>.</p>"""),
  },
 }
@@ -106,12 +110,12 @@ APP_STORE = "https://apps.apple.com/jp/app/id6830070527"
 META = {
  "ja": {"home": "DOTEI｜歩いた道だけを描く散歩の地図アプリ", "locale": "ja_JP",
         "index": "DOTEI は、歩いた道だけを和紙の地図に墨の線で残す iPhone アプリ。Google マップのタイムライン・ヘルスケア・GPX から過去の道も取り込めます。はじめての道は朱。7 日間無料、そのあとは買い切り。",
-        "privacy": "DOTEI のプライバシーポリシー。位置情報・ヘルスケア・取り込んだファイルはすべて端末の中だけで扱います。",
+        "privacy": "DOTEI のプライバシーポリシー。位置情報・ヘルスケア・取り込んだファイルは、端末の中とご自身の iCloud Drive のバックアップだけで扱います。",
         "terms": "DOTEI の利用規約。7 日間の無料体験と買い切りの購入、安全に使うための注意について。",
         "support": "DOTEI のサポート。Google マップのタイムラインやヘルスケアの記録の取り込み方、購入の復元、記録の消し方。"},
  "en": {"home": "DOTEI | A walking map that draws only the streets you have walked", "locale": "en_US",
         "index": "DOTEI is an iPhone app that draws only the streets you have walked, in ink, on a blank map. Import past walks from Google Maps Timeline, Health and GPX. Free for 7 days, then a one-time purchase.",
-        "privacy": "DOTEI privacy policy. Location, Health data and imported files stay on your iPhone.",
+        "privacy": "DOTEI privacy policy. Location, Health data and imported files stay on your iPhone and in your own iCloud Drive backup.",
         "terms": "DOTEI terms of use, including the 7-day free trial, the one-time purchase and safety.",
         "support": "DOTEI support: importing Google Maps Timeline and Health workouts, restoring purchases and deleting records."},
 }
