@@ -23,6 +23,7 @@ PAGES = {
 <ul><li>Google マップのタイムライン・ヘルスケアのワークアウト・GPX ファイルから、これまでの道を何年分でも取り込めます</li>
 <li>同じ道は墨が重なって濃くなり、はじめて通る道は朱で描かれます</li>
 <li>年を選ぶと、その年に歩いた道だけが残ります</li>
+<li>歩いた距離を、富士山の登山道・東海道五十三次・日本縦断・地球一周・月までの距離など 19 のものさしと比べられます</li>
 <li>記録はこの iPhone とご自身の iCloud だけ。アカウント登録もいりません</li>
 <li>はじめの 7 日間は無料、そのあとは買い切り（月額はありません）</li></ul>"""),
   "privacy": ("プライバシーポリシー", f"""<p>このポリシーは、iPhone アプリ「DOTEI」（以下「本アプリ」）で運営者が情報をどう扱うかを定めます。</p>
@@ -63,6 +64,7 @@ PAGES = {
 <ul><li>Import years of past walks from Google Maps Timeline, Health workouts and GPX files</li>
 <li>Streets you walk again grow darker; streets you walk for the first time turn vermilion</li>
 <li>Pick a year to see only the streets you walked that year</li>
+<li>Compare how far you have walked with 19 milestones, from climbing Mount Fuji and the old Tōkaidō road to around the Earth and the Moon</li>
 <li>Your records stay on your iPhone and your own iCloud. No account needed</li>
 <li>Free for the first 7 days, then a one-time purchase (no subscription)</li></ul>"""),
   "privacy": ("Privacy Policy", f"""<p>This policy describes how the iPhone app “DOTEI” (the App) handles information.</p>
